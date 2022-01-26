@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../css fonts"
+		},
+		{
+			"path": "../Imagenes"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../webfonts"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "css fonts"
+	}
+}

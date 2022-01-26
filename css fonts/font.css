@@ -1,0 +1,17 @@
+
+/* font family Goblin */
+
+@font-face {
+    font-family: Goblin;
+    src: url(../Goblin_One/GoblinOne-Regular.ttf);
+}
+
+/* font family Goblin xx*/
+
+/* Para insertar el font se tiene que poner: url(../) seguido de fonts.y escoger el "OFL.txt   */
+
+/* Se repite el mismo proceso si es que quiero meter mas fonts */
+
+
+
+

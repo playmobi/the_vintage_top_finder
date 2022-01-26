@@ -1,0 +1,1232 @@
+
+/* Se tienen que incluir también ñla carpeta de los fonts, como se hace: @import url("../) y selecciona el archivo que creamos que es 
+"font.css"*/
+
+
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden; 
+    font-family: var(--Goblin);
+    background: url('./Imagenes/9.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    background-size: cover;
+    /* width: 100%; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+    
+}
+
+/* *{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    
+} */
+
+:root{
+    /* theme colors */
+    /* Se tiene que crear una variable para la parte que dice a{   */
+
+    --text-gray: #3f4954;
+    --text-light: #686666da;
+    --bg-color: #0f0f0f;
+    --white: #ffffff;
+    --charcoal: #264653;
+    --persian green: #2A9D8F;
+    --crayola: #E9C46A;
+    --orange: #F4A261;
+    --burn: #E76F51;
+
+/* gradient color */
+
+/* Se puede ir a: webgradients.com */
+
+    --sky: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: screen;
+
+    
+
+    /* theme font family */
+
+    /* Después se tiene que poner una "variable" para que pueda aplicar este font
+    dependiendo donde lo queramos replicar ese valor a un "font family", se puede poner esto en el .nav .nav-brand a{. Ej: var(--Goblin);  */
+
+    /* Se pueden poner todos la lista de fonts que queramos */
+
+    /* Podemos integrar mas colores entrando a: coolors.co */
+
+    --Goblin: 'Goblin', 'Anton','Give You Glory','Open Sans','Raleway','Roboto', sans-serif;
+}
+
+/* Global Classes */
+
+a{
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+/* .flex-row{  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+} */
+
+ul{
+    list-style-type: none;
+}
+
+ol{
+    list-style: none;
+}
+
+h5{
+    font-family: var(--Goblin);
+    font-size: 2rem;
+    color: #2A9D8F;
+    text-decoration: underline overline;
+    
+}
+
+h3{
+    font-family: var(--Goblin);
+    color: #41102a;
+}
+
+
+h1{
+    font-family: var(--Goblin);
+    font-size: 8.5rem;
+}
+
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Goblin);
+    cursor: pointer;
+}
+
+span{
+    font-family: var(--Goblin);
+}
+
+
+/* .container{
+    margin: 0 15vw;
+} */
+
+/* Global Classes *x/
+
+
+/* Navigation bar */
+
+.nav {
+    background: #ffffff;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 12vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    justify-content: space-evenly;
+    align-items: stretch;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+
+/* position: fixed y width de 100% sirve para poder fijar el header al momento de hacer scrolldown */
+
+
+/* Aque se alinea el header y los iconos de redes sociales */
+.nav .nav-menu{  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+}
+
+
+.nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none; 
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+    
+}
+
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
+.nav .nav-movil{
+    display: none;
+}
+
+.collapse{
+    height: 30rem;
+}
+
+
+.nav .nav-items{
+    display:flex;
+    margin: 0;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Goblin);
+    font-size: 1.1rem;
+}
+
+.nav .nav-items .nav-link:hover{
+
+    background-color: var(--orange);
+    /* En esta parte puedes cambiar "EL COLOR DEL HOVER Qque ahorita esta en naranja" */
+}
+
+.nav .nav-items .nav-link:hover a{
+    color: var(--white);
+    /* En esta parte puedes cambiar "EL COLOR de la tipografía es BLANCA y es por eso 
+     que da ese efecto al pasar el cursor */
+}
+
+
+.nav .nav-brand a{
+    font-size: 1.2rem;
+    padding: 1.5rem 0;  
+    display: block;  
+    font-family: var(--Goblin);
+    font-size: 1.2rem;
+    /* en la parte de font-size se ajusta para cambiar el tamaño del font del header */
+}
+
+.nav .social{
+    padding: 1.4rem 0;
+}
+
+.nav .social i{
+    padding: 0 .2rem; 
+}
+/* Esto es para ajustar el color de los iconos de SNS */
+
+nav .social i:hover{
+    color: #a1c4cf; 
+}
+
+/* Navigation bar *xxxxxxxxxxx/
+
+/* Main Content */
+
+/* Site Tittle */
+
+
+
+main .site-title{
+    background: url('./Imagenes/3.jpg');
+    background-size: cover;  
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+
+main .site-title .site-background{
+    padding-top: 10rem;
+    text-align: center;
+    color: var(--white);
+}
+
+main .site-title h5,h1{
+    margin: .3rem;
+}
+
+main .site-title .btn{
+    margin: 1.8rem;
+    background: var(--orange);
+    border: none;
+    cursor: pointer;
+    font-size: 21px;
+}
+
+/* Esta parte del .btn en la parte del border ayuda a que el borde sea mas grueso si le pongo
+un borde de 10px se puede ver aun mas grueso */
+
+main .site-title .btn:hover{
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+main .site-title .btn:active{
+
+    background: #2A9D8F;
+    color: #fff;
+    border: 2px solid #2A9D8F;
+}
+
+
+
+/* Site Tittle XXXX*/
+
+/* Carrusel Content */
+
+/* .section .sliders{
+    background: url('./Imagenes/9.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+    background-size: 65%;
+    background-size: cover;
+    display: flex;
+    
+} */
+
+/* main .blog .blog-post{
+    padding-top: 6rem;
+} */
+
+/* El padding-top me va  ayudar a generar espacios entre secciones que es lo que estaba buscando */
+
+/* main .blog-post .blog-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    margin: 3rem 2rem;
+    box-shadow: 0 28px 5px rgba(107, 222, 235, 0.714);
+} */
+
+/* El width me va a servir para "hacer mas amplia la caja donde esta el televisor y toda su información */
+/* El margin me va a ayudar para: 3rem (hacer la caja mas abajo si aplico un 10rem, y el 2 rem alinea de izquiera a derecha, si le aumento mas numero se va mas a la derecha */
+/* box-shadow: el 28px sirve para poder hacer mas ancha la base y el 5px me ayudo a hacer mas delgada los laterales */
+
+/* main .blog-content .blog-title{
+    padding: 2rem 0; 
+} */
+/* El padding aqui funciono para poder hacer un espacio entre el botón y el borde de la caja de texto */
+
+
+/* main .blog-content .btn-blog{
+    padding: .3rem 3rem;
+    font-size: 20px;
+    background: var(--orange);
+    cursor: pointer;
+    
+} */
+
+/* el padding aqui en: .5rem ayuda a hacer mas ancho el boton, el numero que sigue que sería el 9rem hace que se expanda mas el botón sobre la caja */
+
+/* main .blog-content span{
+    display: block;
+    padding: 1rem 0;
+    font-size: 15px;
+} */
+/* Aqui le puse padding para poder dejar un espacio entre el botón naranja */
+/* aqui puse en font-size porque necesitaba hacer mas grande la tipografia pero en este caso la unidad para incrementar el tamaño debe terminar en "px" */
+
+/* section .container .owl-nav{
+    position: absolute;
+    top:0%;
+    margin: 0 auto;
+    width: 100%;
+
+}
+
+
+main .blog-content .btn-blog:hover{
+    background: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+} */
+
+/* aqui se puso esta función para que cuando se pase el cursor en el botón se pueda iluminar */
+
+.sliders{
+  
+  width: 50%;
+  padding: 0%;
+  margin: 8rem 1rem;
+
+}
+
+
+.slideshow{
+    width: 70% auto;
+    position: relative;
+  
+}
+
+.slider1 li, ul{
+    width: 100%;
+ 
+  
+}
+
+.slider1 li, img{
+    width: 100%;
+   
+
+}
+
+.slider1 .caption{
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+padding: 15px 50px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+z-index: 1;
+
+}
+
+.slider1 .caption h3{
+    font-family: var(--Goblin);
+    color: #ffffff;
+    font-size: 50px;
+}
+
+.slider1 .caption .btn{
+    font-family: var(--Goblin);
+    margin: 1rem;
+    font-size: 20px;
+    background: var(--orange);
+    border: none;
+    cursor: pointer;
+}
+
+
+.slider1 .caption .btn:hover{
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+
+.slider1 .caption .btn:active{
+
+    background: #2A9D8F;
+    color: #fff;
+    border: 2px solid #2A9D8F;
+}
+
+
+.slider1 .caption .code{
+    font-family: var(--Goblin);
+    margin-top: 20px;
+    font-size: 10px;
+}
+
+.pages{
+    position: absolute;
+    top: 101%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2em 1em;
+}
+
+.pages li{
+    font-size: 20px;
+    margin: 4px 9px;
+    color: #e8a10a;
+    cursor: pointer;
+
+}
+
+.left, .right{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items:center;
+    color: #ffffff;
+    font-size: 45px; 
+    cursor: pointer;
+    z-index: 2;
+}
+
+
+.left{
+    left: 80px;
+}
+
+.right{
+    right: 80px;
+}
+
+
+.explanation{
+    padding: 4em 1em;
+}
+
+.explanation-card{
+flex: 1;
+}
+
+
+.explanation-card  h3 {
+    color: #ffffff;
+    font-family: var(--Goblin);
+    font-size: 60px;
+    line-height: 73px;
+    font-weight: 900;
+    text-align: center;
+
+}
+
+.explanation-card > p {
+    font-size: 35px;
+    font-weight: normal;
+    color: #ffffff;
+    line-height: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+.explanation-card > code span {
+    font-size: 15px;
+    font-style: lighter;
+    line-height: 35px;
+    color: #ffffff;
+    justify-content: space-around;
+    text-align:center; 
+    
+}
+
+.explanation-card .btn {
+    
+    font-family: var(--Goblin);
+    text-align: center;
+    margin: 1rem;
+    font-size: 20px;
+    background: var(--orange);
+    border: none;
+    cursor: pointer;
+    
+
+}
+
+.explanation-card .btn:hover {
+    
+    margin-right: 18px;
+    text-align: center;
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+    
+}
+
+.explanation-card .btn:active{
+
+    background: #2A9D8F;
+    color: #fff;
+    border: 2px solid #2A9D8F;
+
+}
+
+
+/* Comportamiento Flex */
+
+.contenedor {
+    display: flex;  
+    flex-flow: row wrap;
+    text-align: center; 
+}
+
+.contenedor > * {  
+    flex: 1 100%;
+}
+
+
+@media all and (min-width: 816px) {
+    .side-content { 
+        
+    flex: 1 0 0; }
+}
+
+
+/* cards 3 */
+
+
+#categorias{
+    background: url('./Imagenes/movie-918655_640.jpg');
+    padding: 80px 0px;
+}
+
+.card-deck{
+    display: flex;
+    cursor: pointer;
+    padding: 2em 5em;
+    margin: 20px 10px;  
+    box-shadow: 0px 1px 10px rgba(0,0,0,0,2);
+    transition: all 400ms ease;
+    overflow: hidden;
+    
+}
+
+.card-deck:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0,4);
+    transform: translateY(-8%);
+}
+
+.card-deck img{
+    width: 100%;
+    height: 270px;
+}
+
+.card-body .card-title{
+    font-family: var(--Goblin);
+    font-size: 2rem;
+    color: #ffc107;
+    text-decoration: underline overline;
+    opacity: 0.8;
+    margin-top: 20px;
+}
+
+.card-body .card-text{
+    margin-top: 30px;
+    display: flex;   
+}
+
+.card-text, p{
+    font-size: 20px;
+    line-height: 35px;
+    color: #2A9D8F;
+    font-family: var(--Goblin); 
+    text-align: center;
+}
+
+
+.card-footer{ 
+    background-color: #2fb4cc;
+}
+
+
+.text-muted{
+    font-size: 20px;
+    font-family: var(--Goblin);
+    color: #ffffff!important;
+/* Efectos del botón a partir de aqui */
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px;
+    margin-top: 10px;
+    color: #2fb4cc;
+    border: 1px solid #2fb4cc;
+    border-radius: 15px;
+    transition: all 300ms ease; 
+}
+
+.text-muted:hover{
+    background: var(--orange);
+    color: #ffffff!important;
+}
+
+.text-muted:active{
+
+background: var(--orange);
+color: #fff;
+border: 2px solid var(--orange);
+
+}
+
+
+/* Site Content 2 */
+
+#container{
+    padding: 55px 35px;
+}
+
+#container .site-content{
+display: grid;
+grid-template-columns: 40% 70%;
+}
+
+/* aqui lo ajuste para el tamaño del marco azul transparente para hacerlo mas ancho y mas largo */
+.post-content{
+    margin-bottom: 10rem;
+    padding: 25px;
+    width: 110%;   
+}
+
+/* Efecto de zoom en la imagen de las botellas: */
+
+.site-content .post-content > .post-image > div{
+    overflow: hidden;
+}
+
+/* Aqui se tuvo que ir al html y poner las clase "img" (class="img") esto se pone enseguida del link de la imagen con terminación .jpg: */
+
+.site-content .post-content > .post-image .img{
+    width: 100%;
+    transition: all 1s ease;
+}
+
+.site-content .post-content > .post-image .img:hover{
+    transform: scale(1.3);
+}
+
+/* 
+/XXXEfecto de zoom en la imagen de las  XXXX */ 
+
+
+.post-image{
+    padding: 40px;
+    width: 130%; 
+    background-color: #2fb4cc;
+    border-radius: 60px;
+    opacity: 0.8;
+    background-filter: blur(2px);
+     
+}
+
+
+.post-info > span{
+font-size: 23px;
+padding: auto;
+cursor: pointer;
+
+} 
+
+
+.post-info, .text-success{
+    color: #ffffff;
+    background-color: #bf2fcc;
+    border-radius: 5rem;
+    padding: 0.6rem;
+    bottom: 0%;
+}
+
+
+#container .site-content .post-content > .post-title{
+    padding: 1rem 1rem;
+
+}
+
+/* Sidebar */
+
+.site-content > .sidebar .category-list{
+    font-family: var(--Goblin);
+}
+
+.site-content > .sidebar .category h2{
+    color: #ffffff;
+    padding: 40px;
+    text-decoration: underline overline;
+}
+
+
+ .site-content > .sidebar .category-list .list-items{
+    background: #bf2fcc;
+    padding: 1em 7em;
+    margin: .8rem;
+    border-radius: 15rem;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+
+.category-list .list-items{
+position: relative;
+top: 0px;
+bottom: ;
+right: ;
+left: 200px;
+}
+
+.site-content > .sidebar .category-list .list-items{
+    color: #2fb4cc;
+    font-size: 18px;
+    display: flex;
+    
+}
+
+.site-content > .sidebar .category-list .list-items >a{
+    color: #ffffff;
+    font-size: 20px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.site-content > .sidebar .category-list .list-items >a:active{
+
+    border: 1px solid #fff;
+}
+
+/* SidebarXXXXX */
+
+
+/* Sección site Content 2 XXXX************* */
+
+
+.layout-left{
+    width: 1280px;
+    margin: -100px auto;
+ 
+    
+} 
+
+.layout-right{
+    width: 1280px;
+    margin: 240px auto;   
+}
+
+
+.layout div{
+    display: inline-block;
+    vertical-align: middle;
+  
+}
+
+.layout h3{
+    font-size: 40px;
+    padding: 20px 0;
+    color: #ffffff;
+    text-decoration: underline;
+    cursor: pointer;
+    
+}
+
+.layout p{
+    padding: 25px 0;
+    color: #ffffff;
+}
+
+.layout:hover{
+    background: var(--orange);
+    border-radius: 5px 40px 40px 5px;
+    background-filter: blur(5px);
+    padding: 30px;
+    
+}
+
+.layout button.btn{
+    color: #ffffff;
+}
+
+.layout button.btn{
+    margin: 1.8rem;
+    background: #2fb4cc;
+    border: none;
+    cursor: pointer;
+}
+
+.layout button.btn:hover{
+    background: transparent;
+    border: 2px solid #37ff00;
+}
+
+
+.layout button.btn:active{
+    background: #2fb4cc;
+    color: #fff;
+    border: 2px solid #2fb4cc;
+}
+
+
+
+.layout-left .text{
+    width: 500px;
+
+}
+
+.layout-left .image{
+    width: 700px;
+    text-align: right;
+    
+}
+
+
+.layout-left .image{
+    background-color: #2fb4cc;
+    border-radius: 60px;
+    opacity: 0.7;
+    background-filter: blur(2px);
+}
+
+
+.layout-right .text{
+    width: 500px;
+    
+}
+
+.layout-right .image{
+    width: 700px;
+    text-align: center;
+    
+}
+
+
+.layout-right .image{
+    background-color: #2fb4cc;
+    border-radius: 60px;
+    opacity: 0.7;
+    background-filter: blur(2px);
+}
+
+
+/* SecciónContent 2 XXXX************* */
+
+
+/* Newsletter */
+
+
+.newsletter{
+    margin: -50px auto;
+    width: 80vw;
+    height: 450px;
+    display: flex;
+    padding: 10px;
+    border-radius: 70px;
+    overflow: center;
+    background-color: #2fb4cc;
+    opacity: 0.8;
+    background-image: linear-gradient(135deg, #ff4c4c 10%, transparent 20%);
+    background-size: 15px 10px;
+    background-repeat: repeat;
+
+}
+
+.newsletter .gif{
+    flex-basis: 40%;
+    display: grid;
+    place-items: center;
+}
+
+.newsletter .body-text{
+    flex-basis: 60%;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 85px auto;
+    
+}
+
+.body-text h1{
+flex-basis: 60%;
+padding: 10px;
+display: flex;
+justify-content: center;
+flex-direction: column;
+color: #ffffff;
+font-size: 2vw;
+line-height: 3vw;
+text-decoration: underline #ffffff;
+cursor: pointer;
+}
+
+.body-text p{
+margin: 18px;
+color: #ffc107;
+cursor: pointer;
+}
+
+.body-text p:hover{
+    background: transparent;
+    color: var(--white);
+}
+
+.inps input[type="email"] {
+    background: rgb(251 251 251);
+    border: none;
+    outline: none;
+    width: 80%;
+    padding: 20px;
+    font-size: 20px;
+    height: 28px;
+    border-radius: .2rem;
+    text-align: center;
+}
+
+
+.inps input[type="email"]:focus{
+    border: 4px solid #ffc107;
+}
+
+.inps button{
+    width: 45%;
+    height: 39px;
+    padding: 6px;
+    margin-top: 15px;
+    background: #ff0037;
+    color: #fff;
+    border: 1px solid #ff0037;
+    outline: 0;
+    font-size: 15px;
+    border-radius: .9em;
+    cursor: pointer;
+    transition: .2s all;
+    user-select: none;
+
+}
+
+.inps button:hover{
+    background: #ffffff;
+    color: #ff0037;
+    border: 1px solid #ff0037;
+}
+
+.inps button:active{
+    background: #ff0037;
+    color: #fff;
+    border: 2px solid #ff0037;
+}
+
+
+/* viewport 815px */ 
+/* Aqui se integra el media query para poder trabajar la parte "responsive" */
+
+@media screen and (max-width: 988px){
+    
+    .newsletter {
+        width: 80vw;
+        height: auto;
+        padding: 10px;
+        display: block;
+        background-color: #2fb4cc;
+        opacity: 0.8;
+        background-image: linear-gradient(135deg, #ff4c4c 10%, transparent 20%);
+   
+    }
+
+    .newsletter .gif{
+        height: 300px;
+        object-fit: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: -60px auto;
+
+    }
+
+
+
+    .newsletter .body-text h1{
+
+        font-size: 1.5em;
+        line-height: 40px;
+        margin: 5px 0;
+    }
+
+    .newsletter .inps button{
+        width: 45%;
+    }
+
+
+}
+
+
+/* Newsletter */
+
+
+
+
+/* Comportamiento Flex "Categorias" */
+
+.categorias{
+    display: flex;  
+    flex-flow: row wrap;
+    text-align: center; 
+    
+    
+}
+
+.categorias > * {  
+    flex: 1 100%;
+    
+}
+
+
+
+@media all and (min-width: 816px) {
+    .card-deck"{ 
+        
+    flex: 1 0 0; }
+}
+
+
+
+/* footer */
+
+footer{
+    width: 100%;
+    padding: 10px 0px;
+    
+}
+
+.container-footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 150px;
+    
+}
+
+
+
+/* Aqui le puse "display:flex" para que ponga las columnas una a lado de otra  */
+
+/* Aqui le puse "flex-wrap" para que se pongan las columnas una abajo de otra al momento de hacer el responsive */
+
+/* El "justify-content": space-between se puso para que puedan mantener una posición estirada y ocupen "el ancho" completo de la pantalla  */
+
+/* El "margin=auto" lo puse para que se pueda centrar el "contenedor" */
+
+/* El "margin-top" ayudará a "DEJAR ESPACIOS DE ARRIBA HACIA ABAJO" */
+
+.container-footer h2{
+    color: #e8a10a;
+    cursor: pointer;
+}
+
+.container-footer h2:hover{
+    background: transparent;
+    color: var(--white);
+}
+    
+
+.box-footer{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+/* Use "display=flex para que "SUS ELEMENTOS SE PONGAN UNO DEBAJO DEL OTRO"  */
+/* Use "flex-direction: column" para que los elementos se pusieran en columna, por ej. las redes sociales */
+/* Puse un "padding" para que se mantenga un pequeño margen  */
+
+
+.box-footer .terms {
+    max-width: 350px;
+    margin-top: 20px;
+    font-weight: 50;
+    color: #ffffff;
+    font-size: 10px;
+    opacity: 0.8;
+    
+}
+
+/* Se usa "Margin-top: 20px" para que haya espacio entre el logo (el logo esta pendiente de meterlo) y el parrafo */
+
+.box-footer h2{
+    margin-bottom: 25px;
+  
+}
+
+/* el "margin-bottom" se pondra para poder dejar un espacio entro los titulos de "contacto" y los elementos que estan debajo */
+
+.box-footer a{
+    margin-top: 10px;
+    color: #ffffff;
+    opacity: 0.8;
+    cursor: pointer;   
+}
+
+/* Se usa "margin-top" para poder alinear con el parrafo */
+
+
+.box-copyright{
+
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.box-copyright p{
+    margin-top: 20px;
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+.box-copyright hr{
+    border: none;
+    height: 1px;
+    background-color: #e8a10a;
+
+}
+    
+
+
+/* viewport 750px */ 
+/* Aqui se integra el media query para poder trabajar la parte "responsive" */
+
+@media only screen and (max-width: 815px){
+    /* Aqui se recomienda que después de poner .nav{ se integre background: black;
+        Esto con la finalidad de ir viendo a cuanto tengo que poner las medidas
+        en pixeles la pantalla en la parte de "Responsive" se tiene que ampliar
+        desde la consola antes de que se ponga blanco, a partir de ahí es donde tengo
+        considerar las medidas en píxeles */
+
+    .explanation{
+        margin-top: -8em;
+    }
+   
+
+    .nav .nav-menu .nav-items{
+        display: none;
+    } 
+
+    .nav .nav-menu .social{
+        display: none;
+    }
+
+    /* Este aplica para el menu de hamburguesa */
+
+    .nav .toggle-collapse{
+        display: initial;
+    }
+
+    .nav .nav-movil{
+        display: none;
+        position: fixed;
+        top: 12vh;
+        right: 0px;
+        background-color: #ffc107;
+        z-index: 1000;
+    }
+
+}
+/* viewport 815px *xx/
+
+
+
+
+
+
+
